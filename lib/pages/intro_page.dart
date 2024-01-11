@@ -16,10 +16,7 @@ class IntroPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const SizedBox(
-              height: 25
-            ),
-
+            const SizedBox(height: 25),
 
             //shop name
             Text(
@@ -30,17 +27,15 @@ class IntroPage extends StatelessWidget {
               ),
             ),
 
-            const SizedBox(
-              height: 25
-            ),
+            const SizedBox(height: 25),
 
-            
             //icon
             Center(
               child: Padding(
                 padding: const EdgeInsets.all(50),
                 child: Image.asset(
                   'lib/images/salmon_eggs.png',
+                  height: 100,
                 ),
               ),
             ),

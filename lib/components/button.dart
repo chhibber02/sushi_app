@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sushi_app/themes/colors.dart';
 
 class MyButton extends StatelessWidget {
   final String text;
@@ -12,7 +13,7 @@ class MyButton extends StatelessWidget {
       child: Container(
         padding: const EdgeInsets.all(20),
         decoration: BoxDecoration(
-          color: const Color.fromARGB(255, 139, 75, 70),
+          color: secondaryColor,
           borderRadius: BorderRadius.circular(40),
         ),
         child: Row(

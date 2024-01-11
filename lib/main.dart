@@ -1,14 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:sushi_app/pages/home_page.dart';
+import 'package:provider/provider.dart';
+import 'package:sushi_app/models/shop.dart';
+import 'package:sushi_app/pages/cart_page.dart';
 import 'package:sushi_app/pages/intro_page.dart';
 
 import 'pages/menu_page.dart';
 
 void main() {
-  return runApp(const MyApp());
+  return runApp(
+    ChangeNotifierProvider(
+      create: (context) => Shop(),
+      child: const MyApp(),
+    ),
+  );
 }
 
-class MyApp extends StatelessWidget{
+class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   @override
@@ -22,10 +29,9 @@ class MyApp extends StatelessWidget{
       ),
       home: const IntroPage(),
       routes: {
-        'home':(context) => const HomePage(),
-        'menuPage':(context) => const MenuPage(),
+        'menuPage': (context) => const MenuPage(),
+        'cartPage': (context) => const CartPage(),
       },
     );
   }
-
 }
